@@ -44,7 +44,7 @@
             </div>
         </section>
 
-        <?
+        <?php
         //post
         $nama = $_POST['nama'];
         $bookDate = $_POST['bookDate'];
@@ -58,13 +58,13 @@
         $checkIn = date('Y-m-d H:i:s', strtotime("$bookDate $startTime"));
         $checkOut = date('Y-m-d H:i:s', strtotime($bookDate.  "+ $dur".'days' ."$startTime"));
 
-        sif ($car == "Toyota Avanza") {
+        if ($car == "Toyota Avanza") {
             $totPrice = 150000*$dur;
         } elseif ($car == "Daihatsu Terios") {
             $totPrice = 200000*$dur;
         } else{
             $totPrice = 100000*$dur;
-        
+        }
 
         foreach($service as $layanan){
             if ($layanan == "Health protocol"){
