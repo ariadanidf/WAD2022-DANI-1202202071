@@ -17,7 +17,7 @@
             move_uploaded_file($temp, '../asset/images/'.$foto);
             $pembayaran = $_POST['statusPembayaran'];
 
-            $query = mysqli_query($connect, " INTO showroom_dani_table(nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil, status_pembayaran)
+            $query = mysqli_query($connect, "INSERT INTO showroom_dani_table(nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil, status_pembayaran)
             VALUES('$namaMobil','$namaPemilik','$merk','$tglBeli','$deskripsi','$foto','$pembayaran')");
 
             if ($query){

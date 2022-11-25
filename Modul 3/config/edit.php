@@ -3,7 +3,7 @@
         include('..\config\connector.php');
 
         $id = $_GET[("id")];
-        $query = mysqli_query($connect, "SELECT FROM showroom_dani_table WHERE id_mobil = $id");
+        $query = mysqli_query($connect, "SELECT * FROM showroom_dani_table WHERE id_mobil = $id");
         $hasil = mysqli_fetch_assoc($query);
         if (isset($_POST['save'])){
             $idMobil = $_POST['idMobil'];
