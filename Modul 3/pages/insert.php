@@ -5,7 +5,6 @@ include('..\config\connector.php');
 
 
 if (isset($_POST['selesai'])){
-    $idMobil = rand();
     $namaMobil = $_POST['namaMobil'];
     $namaPemilik = $_POST['namaPemilik'];
     $merk = $_POST['merk'];
@@ -18,8 +17,8 @@ if (isset($_POST['selesai'])){
     move_uploaded_file($temp, '../asset/images/'.$foto);
     $pembayaran = $_POST['statusPembayaran'];
 
-    $query = mysqli_query($connect, "INSERT INTO showroom_dani_table(id_mobil,nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil, status_pembayaran)
-    VALUES('$idMobil','$namaMobil','$namaPemilik','$merk','$tglBeli','$deskripsi','$foto','$pembayaran')");
+    $query = mysqli_query($connect, "INSERT INTO showroom_dani_table(nama_mobil, pemilik_mobil, merk_mobil, tanggal_beli, deskripsi, foto_mobil, status_pembayaran)
+    VALUES('$namaMobil','$namaPemilik','$merk','$tglBeli','$deskripsi','$foto','$pembayaran')");
 
     if ($query){
         header('Location: ..\pages\Add-Dani.php');

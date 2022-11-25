@@ -18,16 +18,22 @@
     <!-- Navbar -->
     <section>
         <nav class="navbar navbar-lg bg-primary">
-            <div class="container justify-content-start">
-                <a class="navbar-brand text-white" href="..\index.php">Home</a>
-                <?php
-                if ($itung == 0){
-                    echo '<a class="navbar-brand text-white" href=".\Add-Dani.php">MyCar</a>';
-                }
-                else{
-                    echo '<a class="navbar-brand text-white" href=".\ListCar-Dani.php">MyCar</a>';
-                }
-                ?>
+            <div class="container">
+                <div class="justify-content-start">
+                    <a class="navbar-brand text-white" href="..\index.php">Home</a>
+                    <?php
+                    if ($itung == 0){
+                        echo '<a class="navbar-brand text-white" href=".\Add-Dani.php">MyCar</a>';
+                    }
+                    else{
+                        echo '<a class="navbar-brand text-white" href=".\ListCar-Dani.php">MyCar</a>';
+                    }
+                    ?>
+                </div>
+
+                <div class="justify-content-end">
+                    <a type="button" class="btn btn-light" href=".\Add-Dani.php">Add Car</a>
+                </div>
             </div>
         </nav>
     </section>
@@ -61,11 +67,11 @@
                         echo $getDesc;?></p>
                         <div class="row">
                             <div class="col">
-                                <a href="./Detail-Dani.php" class="btn btn-primary">Detail</a>
+                                <a href="./Detail-Dani.php?id=<?=$patokan['id_mobil']?>" class="btn btn-primary">Detail</a>
                             </div>
 
                             <div class="col">
-                                <a href="#" class="btn btn-danger">delete</a> 
+                                <a href="../config/delete.php?id=<?=$patokan['id_mobil']?>" class="btn btn-danger">Delete</a> 
                             </div>
                         </div>
                     </div>
