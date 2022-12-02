@@ -11,7 +11,7 @@
             if ( $pass == $hasil["password"]){
                 $_SESSION["masuk"] = true;
                 if (isset($_POST["ingatSaya"])){
-                    setcookie('', $hasil["id"], strtotime('+3 days'), '/');
+                    setcookie('ingatSaya', $hasil["id"], strtotime('+3 days'), '/');
                     header('Location: ..\pages\Home-Dani.php');
                     exit;
                 }else{

@@ -11,7 +11,7 @@
             </head>
             <?php
             include ('..\config\connector.php');
-            if (isset($_SESSION['registers']) & & $_SESSION == 'gagal') {
+            if (isset($_SESSION['registers']) && $_SESSION == 'gagal') {
                 $_SESSION['register'] = '';?>
                 <div class="alert alert-warning m-0 p-2 alert-dismissible" role="alert">
                     Email anda sudah terdaftar!
