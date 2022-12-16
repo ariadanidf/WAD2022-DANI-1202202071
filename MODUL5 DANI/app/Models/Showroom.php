@@ -9,7 +9,7 @@ class Showroom extends Model
 {
     use HasFactory;
 
-    public $table = 'showrooms';
+    public $table = 'showroom';
     protected $guarded = ['id'];
     public $timestamps = false;
     
