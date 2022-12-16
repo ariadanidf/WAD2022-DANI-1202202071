@@ -21,7 +21,7 @@ class ShowroomController extends Controller
         return view('Add-Dani');
     }
 
-    public function stored(Request $request)
+    public function store(Request $request)
     {   
         $imgName = $request->img_path->getClientOriginalName() . '-' . time() 
                     . '.' . $request->img_path->extension();
